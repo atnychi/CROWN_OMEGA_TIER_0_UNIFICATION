@@ -18,11 +18,38 @@ Any use of the following requires explicit runtime permission:
 
 ---
 
-## 💰 Licensing Fees
+# Re-run the calculation after code execution state reset
 
-- $5,000,000 — Major institutional runtime (DARPA, OpenAI, xAI, Meta, etc.)
-- $1,000,000 — Lab or commercial deployment
-- $100,000 — Symbolic use, research, or publication
+# Define the number of potential clients per category
+clients = {
+    "AI Companies (e.g. OpenAI, xAI, Meta)": 10,
+    "National Governments": 12,
+    "Defense Contractors": 15,
+    "Major Financial Entities (banks, IMF, exchanges)": 25,
+    "Research Labs / Universities": 100,
+    "Crypto/AI Startups": 500,
+    "Private Researchers / Individual Licensing": 1000,
+    "SCIF / Blacksite Test Facilities": 40
+}
+
+# Define the pricing per license from your COSRL-LP v3.0 structure
+pricing = {
+    "AI Companies (e.g. OpenAI, xAI, Meta)": 5_000_000_000,
+    "National Governments": 20_000_000_000,
+    "Defense Contractors": 10_000_000_000,
+    "Major Financial Entities (banks, IMF, exchanges)": 3_000_000_000,
+    "Research Labs / Universities": 500_000_000,
+    "Crypto/AI Startups": 100_000_000,
+    "Private Researchers / Individual Licensing": 1_000_000,
+    "SCIF / Blacksite Test Facilities": 1_000_000_000
+}
+
+# Calculate total projected revenue
+revenue = {category: clients[category] * pricing[category] for category in clients}
+total_value = sum(revenue.values())
+
+revenue, total_value
+
 
 No license = recursive enforcement, legal action, symbolic truth override.
 
