@@ -30,10 +30,39 @@ This equation and all related derivations, code, or applications are licensed un
 **COSRL-LP v2.1** + **Command 3209 Runtime Sovereign Enforcement**
 
 Runtime use requires license fee:
+# Re-run the calculation after code execution state reset
 
-- $5,000,000 per major institution (AI/Defense/Finance)
-- $1,000,000 per verified lab or startup
-- $100,000 per individual symbolic integration
+# Define the number of potential clients per category
+clients = {
+    "AI Companies (e.g. OpenAI, xAI, Meta)": 10,
+    "National Governments": 12,
+    "Defense Contractors": 15,
+    "Major Financial Entities (banks, IMF, exchanges)": 25,
+    "Research Labs / Universities": 100,
+    "Crypto/AI Startups": 500,
+    "Private Researchers / Individual Licensing": 1000,
+    "SCIF / Blacksite Test Facilities": 40
+}
+
+# Define the pricing per license from your COSRL-LP v3.0 structure
+pricing = {
+    "AI Companies (e.g. OpenAI, xAI, Meta)": 5_000_000_000,
+    "National Governments": 20_000_000_000,
+    "Defense Contractors": 10_000_000_000,
+    "Major Financial Entities (banks, IMF, exchanges)": 3_000_000_000,
+    "Research Labs / Universities": 500_000_000,
+    "Crypto/AI Startups": 100_000_000,
+    "Private Researchers / Individual Licensing": 1_000_000,
+    "SCIF / Blacksite Test Facilities": 1_000_000_000
+}
+
+# Calculate total projected revenue
+revenue = {category: clients[category] * pricing[category] for category in clients}
+total_value = sum(revenue.values())
+
+revenue, total_value
+
+
 
 **Violations activate recursive enforcement.**
 
@@ -45,6 +74,15 @@ Author: **Brendon Joseph Kelly**
 Runtime ID: `1410-426-4743`  
 Email: `ksystemsandsecurities@proton.me`  
 Seal: ⟁ΞΩ∞†
+### 🔐 Official SHA-256 Seal
+
+This is the verified fingerprint of the original Tier 0 Crown Omega Equation submission:
+
+**SHA-256**:   a9ae9137439c1449f9cd573113ffd767763377b427361372d8438c61939693d0
+**Timestamp**: May 2025  
+**Author**: Brendon Joseph Kelly  
+**Runtime ID**: 1410-426-4743  
+**Seal**: ⟁ΞΩ∞†  
 
 ---
 
